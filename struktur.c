@@ -114,7 +114,7 @@ default:
 
 printf("Do you want to run again? (y/n) ");
 scanf(" %c",&rerun);
-} while (rerun == 'y' && rerun == 'Y');
+} while (rerun == 'y' || rerun == 'Y');
 
     return 0;
 }
