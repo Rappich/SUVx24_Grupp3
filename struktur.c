@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <struct.h>
+#include <string.h>
 
 struct groupRoom
 {
@@ -17,7 +17,7 @@ int main ()
 int choice;
 int menu;
 char rerun;
-
+char b [50];
 
     struct groupRoom room[5];
 
@@ -29,6 +29,7 @@ char rerun;
         for (int j = 0; j<10;j++)
         {
             room[i].time[j] = 1;
+            room[i].booker[j][0] = '.'; 
         }
         
     }
@@ -53,13 +54,14 @@ case 1:
             }
         int chosenRoom;
         printf("What room do you want to book?\n");
-        printf("1\n 2\n3\n 4\n5\n");
+        printf("1\n2\n3\n4\n5\n");
         scanf("%d", &chosenRoom);
 
         if (room[chosenRoom-1].time[choice-1] == 1)
 
             {
                 printf("What is your name?\n");
+                getchar();
                 fgets(room[chosenRoom-1].booker[choice-1],sizeof(room[chosenRoom-1].booker[choice-1]),stdin);
                 printf("Your room is booked! Enjoy your stay \n");
                 room[chosenRoom-1].time[choice-1] = 0;
@@ -74,7 +76,8 @@ case 1:
 case(2):
 char name [50];
 
-    printf("What's your name? Enter your full name.\n");
+    printf("What's your name? Enter your full name.\n ");
+    getchar();
     fgets(name,sizeof(name),stdin);
     printf("%s", name);
 
@@ -83,10 +86,9 @@ char name [50];
         for (int j = 0; j<10;j++)
         {
             char cancel;
-                
-                if (name == room[i].booker[j])
+                if (strcmp(name,room[i].booker[j]) == 0)
                 {
-                printf("You booked room %d at time %d:00",room[i].roomNumber,j+8);
+                printf("You booked room %d at time %d:00\n",room[i].roomNumber,j+8);
                 printf("Do you want to cancel (y/n) ?\n");
                 scanf(" %c", &cancel);
                 
