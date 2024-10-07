@@ -2,6 +2,7 @@
 //tjeeeeeeeeena fan
 //TJENA BIBBLAN HUR FAN E LÄGEEET???
 //nu då
+//foer helvidi
 int main()
 {
 
