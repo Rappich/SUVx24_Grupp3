@@ -69,14 +69,12 @@ int main()
         printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
         printf("\n1: Grön");
         printf("\n2: Blå");
+
         printf("\n3: Röd");
        
         scanf("%d",&val);
         if(val == 1)
-        printf("\n3: Gul");
-
-        scanf("%d", &val);
-        if (val == 1)
+          
         {
             printf("Rätt!");
             poäng++;
