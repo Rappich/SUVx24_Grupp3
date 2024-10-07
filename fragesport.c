@@ -1,6 +1,7 @@
 #include <stdio.h>
 //tjeeeeeeeeena fan
 //TJENA BIBBLAN HUR FAN E LÄGEEET???
+//nu då
 int main()
 {
 
