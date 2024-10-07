@@ -236,6 +236,7 @@ int main()
         printf("\n1: Katt");
         printf("\n2: Hund");
         printf("\n3: Ko");
+        printf("\n4: Flodhäst");
         if (val == 2)
         {
             printf("Rätt!");
