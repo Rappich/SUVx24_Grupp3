@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+//tjeeeeeeeeena fan
+//TJENA BIBBLAN HUR FAN E LÄGEEET???
+//nu då
+//foer helvidissssssss
 int main()
 {
 
@@ -66,23 +69,15 @@ int main()
         printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
         printf("\n1: Grön");
         printf("\n2: Blå");
-<<<<<<< HEAD
 
-=======
->>>>>>> new-feature
         printf("\n3: Röd");
        
         scanf("%d",&val);
         if(val == 1)
-<<<<<<< HEAD
-
+          
         {
             printf("Rätt!");
             poäng++;
-=======
-        printf("Rätt svar\n");
-
->>>>>>> new-feature
         }
         else
         {
@@ -131,6 +126,18 @@ int main()
         else
         {
             printf("Fel svar, rätt svar var: 2. Flodhäst\n");
+        }
+
+        printf("Vad är Nikkis favorit färg?\n1. Grön\n2. Blå\n3. Röd\nSvar: ");
+        scanf("%i", &val);
+
+        if (val == 1)
+        {
+            printf("Rätt svar!\n");
+        }
+        else
+        {
+            printf("Fel svar, rätt svar var: 1. Grön\n");
         }
 
         break;
