@@ -66,15 +66,23 @@ int main()
         printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
         printf("\n1: Grön");
         printf("\n2: Blå");
+<<<<<<< HEAD
 
+=======
+>>>>>>> new-feature
         printf("\n3: Röd");
        
         scanf("%d",&val);
         if(val == 1)
+<<<<<<< HEAD
 
         {
             printf("Rätt!");
             poäng++;
+=======
+        printf("Rätt svar\n");
+
+>>>>>>> new-feature
         }
         else
         {
