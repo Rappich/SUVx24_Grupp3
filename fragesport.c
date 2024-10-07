@@ -67,17 +67,14 @@ int main()
         printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
         printf("\n1: Grön");
         printf("\n2: Blå");
-<<<<<<< HEAD
         printf("\n3: Röd");
        
         scanf("%d",&val);
         if(val == 1)
-=======
         printf("\n3: Gul");
 
         scanf("%d", &val);
         if (val == 1)
->>>>>>> 29ef6256257eea1a11bca19bb312c4c075f40f80
         {
             printf("Rätt!");
             poäng++;
@@ -129,6 +126,18 @@ int main()
         else
         {
             printf("Fel svar, rätt svar var: 2. Flodhäst\n");
+        }
+
+        printf("Vad är Nikkis favorit färg?\n1. Grön\n2. Blå\n3. Röd\nSvar: ");
+        scanf("%i", &val);
+
+        if (val == 1)
+        {
+            printf("Rätt svar!\n");
+        }
+        else
+        {
+            printf("Fel svar, rätt svar var: 1. Grön\n");
         }
 
         break;
