@@ -67,7 +67,7 @@ case 1:
     printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
         printf("\n1: Grön");
         printf("\n2: Blå");
-        printf("\n3: Gul");
+        printf("\n3: Röd");
        
         scanf("%d",&val);
         if(val == 1)
