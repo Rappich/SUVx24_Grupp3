@@ -259,7 +259,7 @@ int main()
         printf("\n3: Ishockey");
 
         scanf("%d", &val);
-        if (val == 1)
+        if (val == 2)
         {
             printf("Rätt!");
             poäng++;
