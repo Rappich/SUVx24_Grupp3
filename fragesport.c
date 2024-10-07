@@ -32,7 +32,8 @@ case 1:
             printf("Rätt!");
             poäng++;
         }
-        else{
+        else
+        {
             printf("Fel svar!");
         }
     printf("\nFråga 2: Vad gör Fredrik på Fritiden?");
@@ -55,6 +56,21 @@ case 1:
         printf("\n3: Lasagne");
         scanf("%d",&val);
         if(val == 2)
+        {
+            printf("Rätt!");
+            poäng++;
+        }
+        else
+        {
+            printf("Fel svar!");
+        }
+    printf("\nFråga 4: Vilken är Fredriks favoritfärg\n");
+        printf("\n1: Grön");
+        printf("\n2: Blå");
+        printf("\n3: Gul");
+       
+        scanf("%d",&val);
+        if(val == 1)
         {
             printf("Rätt!");
             poäng++;
