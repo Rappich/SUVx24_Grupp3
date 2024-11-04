@@ -1,14 +1,29 @@
 #include <iostream>
+#include <vector>
+#include <time.h>
+using namespace std;
 
 const int TOTAL_ROUNDS = 15;          // Yahtzee has 13 rounds in a single game
 const int TOTAL_DICE = 5;             // 5 dice are used
 const int MAX_ROLLS = 3;              // Maximum rolls allowed per turn
 int currentRound = 0;                // Tracks the current round
 
+vector<int> dice[5];
+
+
+void rollDice(vector<int> (&dice)[5]) 
+{
+    vector<int> rolls; 
+    for (int i = 0; i < 5; ++i) 
+    {
+        dice[i] = {rand() % 6 + 1}; 
+    }
+    
+}
 int main ()
 
 {
-    Initialize game for Player
+    /* Initialize game for Player
         Play all rounds for the current player
 
 Function play_round(player):
@@ -26,8 +41,15 @@ Function play_round(player):
             Break out of the roll loop
         Decrement rolls_left by 1
 
-    Display dice after final roll
+    Display dice after final roll */
+    srand(time(0));
+    rollDice(dice);
 
+    for (int i = 0; i < 5; i++)
+    {
+        cout << dice[i][0] << endl;
+    }
+    
 
     return 0;
 }
