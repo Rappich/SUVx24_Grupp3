@@ -27,6 +27,10 @@ Function play_round(player):
         Decrement rolls_left by 1
 
     Display dice after final roll
+    for (int i = 0; name <  ; i++)
+    cout << "Player 2s turn is over\n player1s turn"<<;
+
+    cout << "Player 1s turn is over\n player2s turn"<<;
 
 
     return 0;
