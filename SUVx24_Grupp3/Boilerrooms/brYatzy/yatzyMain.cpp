@@ -1,12 +1,9 @@
 #include <iostream>
 
-Initialize game with constants:
-    TOTAL_ROUNDS = 13          // Yahtzee has 13 rounds in a single game
-    TOTAL_DICE = 5             // 5 dice are used
-    MAX_ROLLS = 3              // Maximum rolls allowed per turn
-
-Define Game State:
-    current_round = 0                          // Tracks the current round
+const int TOTAL_ROUNDS = 15;          // Yahtzee has 13 rounds in a single game
+const int TOTAL_DICE = 5;             // 5 dice are used
+const int MAX_ROLLS = 3;              // Maximum rolls allowed per turn
+int currentRound = 0;                // Tracks the current round
 
 int main ()
 
