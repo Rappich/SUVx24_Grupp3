@@ -108,7 +108,7 @@ playerManagement pm;
 pm.initializePlayers();
 
 
-   /*/*/* Initialize game for Player
+   /* Initialize game for Player
         Play all rounds for the current player
 
 Function play_round(player):
@@ -150,7 +150,7 @@ Function play_round(player):
     }
     for (int i = 0; i < inputReroll; i++)
     {
-        rollDice(dice,indecreroll[i]);
+        rollDice(dice,indexreroll[i]);
     }
     reroll++
     
@@ -158,10 +158,6 @@ Function play_round(player):
     cout << "Player 2s turn is over\n player1s turn"<<;
 
     cout << "Player 1s turn is over\n player2s turn"<<;
-
-    Display dice after final */
-
-    
 
     return 0;
 }
