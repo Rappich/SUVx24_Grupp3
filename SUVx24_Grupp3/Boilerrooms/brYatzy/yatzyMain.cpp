@@ -108,7 +108,7 @@ playerManagement pm;
 pm.initializePlayers();
 
 
-    /*/* Initialize game for Player
+   /*/*/* Initialize game for Player
         Play all rounds for the current player
 
 Function play_round(player):
@@ -127,7 +127,33 @@ Function play_round(player):
         Decrement rolls_left by 1
 
 
-    Display dice after final roll
+    Display dice after final roll */ 
+
+    ///////////Dice display implementation
+    // roll dice
+
+    displayDice(dice.at(0));
+    displayDice(dice.at(1));
+    displayDice(dice.at(2));
+    displayDice(dice.at(3));
+    displayDice(dice.at(4));
+
+    int inputReroll;
+    cout << "How many dice do you want to reroll?";
+    cin >> inputReroll;
+    vector<int> indexReroll;
+    for (int i = 0; i < inputReroll; i++)
+    {
+        int x;
+        cin >> x;
+        indexReroll.push_back(x);
+    }
+    for (int i = 0; i < inputReroll; i++)
+    {
+        rollDice(dice,indecreroll[i]);
+    }
+    reroll++
+    
     for (int i = 0; name <  ; i++)
     cout << "Player 2s turn is over\n player1s turn"<<;
 
@@ -135,7 +161,15 @@ Function play_round(player):
 
     Display dice after final */
 
-
+    
 
     return 0;
+}
+int displayDice(int dice)
+{
+    cout << dice << endl;
+}
+void RollDice(vector<int> dice,int index)
+{
+    dice.at(index) = rand() % 6 + 1;
 }
