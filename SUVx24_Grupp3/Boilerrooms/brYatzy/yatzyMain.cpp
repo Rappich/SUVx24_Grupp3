@@ -1,6 +1,9 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <time.h>
+#include <string>
+
+using namespace std;
 
 const int TOTAL_ROUNDS = 15;          // Yahtzee has 13 rounds in a single game
 const int TOTAL_DICE = 5;             // 5 dice are used
@@ -46,6 +49,57 @@ class playerManagement
     }
 };
 
+using namespace std;
+
+class playerManagement 
+{
+    public:
+    vector<string> playerNames;
+     
+    void addPlayer(string name) 
+    {
+        playerNames.push_back(name);
+    }
+
+    void initializePlayers() 
+    {
+    int numPlayers;
+    cout << "Enter the number of players: ";
+    cin >> numPlayers;
+
+
+        for (int i = 0; i < numPlayers; ++i) 
+        {
+            string name;
+            cout << "Enter name for player " << (i + 1) << ": ";
+            getline(cin, name);
+            addPlayer(name);
+        }
+    }
+
+    //When players turn is over. Kanske ska ligga som if-sats
+    void nextPlayer(int numPlayers)
+    {   
+        if (numPlayers > 1)
+        {
+            cout << "your turn is over, next players turn." << endl;
+        }
+
+    }
+};
+
+vector<int> dice[5];
+
+
+void rollDice(vector<int> (&dice)[5]) 
+{
+    vector<int> rolls; 
+    for (int i = 0; i < 5; ++i) 
+    {
+        dice[i] = {rand() % 6 + 1}; 
+    }
+    
+}
 int main ()
 
 {
@@ -55,7 +109,7 @@ playerManagement pm;
 pm.initializePlayers();
 
 
-    /*Initialize game for Player
+    /*/* Initialize game for Player
         Play all rounds for the current player
 
 Function play_round(player):
