@@ -73,15 +73,15 @@ Function play_round(player):
             Break out of the roll loop
         Decrement rolls_left by 1
 
-<<<<<<< HEAD
+
     Display dice after final roll
     for (int i = 0; name <  ; i++)
     cout << "Player 2s turn is over\n player1s turn"<<;
 
     cout << "Player 1s turn is over\n player2s turn"<<;
-=======
+
     Display dice after final */
->>>>>>> e5922f2c20b071963cbdb60ab61c616369079329
+
 
 
     return 0;
