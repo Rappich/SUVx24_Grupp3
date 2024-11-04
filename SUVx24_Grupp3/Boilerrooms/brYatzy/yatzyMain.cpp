@@ -14,7 +14,7 @@ class playerManagement
     public:
     vector<string> playerNames;
      
-    void addPlayer(string& name) 
+    void addPlayer(string name) 
     {
         playerNames.push_back(name);
     }
@@ -24,6 +24,7 @@ class playerManagement
     int numPlayers;
     cout << "Enter the number of players: ";
     cin >> numPlayers;
+
 
         for (int i = 0; i < numPlayers; ++i) 
         {
