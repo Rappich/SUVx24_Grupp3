@@ -10,8 +10,6 @@ const int TOTAL_DICE = 5;             // 5 dice are used
 const int MAX_ROLLS = 3;              // Maximum rolls allowed per turn
 int currentRound = 0;                // Tracks the current round
 
-using namespace std;
-
 class playerManagement 
 {
     public:
@@ -77,6 +75,8 @@ class playerManagement
         }
     }
 
+};
+
     //When players turn is over. Kanske ska ligga som if-sats
     void nextPlayer(int numPlayers)
     {   
@@ -86,7 +86,6 @@ class playerManagement
         }
 
     }
-};
 
 vector<int> dice[5];
 
