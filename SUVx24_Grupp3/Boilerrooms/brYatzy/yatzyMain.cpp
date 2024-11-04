@@ -42,14 +42,6 @@ Function play_round(player):
         Decrement rolls_left by 1
 
     Display dice after final roll */
-    srand(time(0));
-    rollDice(dice);
-
-    for (int i = 0; i < 5; i++)
-    {
-        cout << dice[i][0] << endl;
-    }
-    
 
     return 0;
 }
