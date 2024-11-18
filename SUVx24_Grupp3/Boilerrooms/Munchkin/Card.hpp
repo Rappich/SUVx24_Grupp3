@@ -7,12 +7,20 @@
 #include <random>    // for random_device and mt19937
 #include <string>
 
-struct Card {
+class Card
+{
+public:
     std::string name;
     std::string type; // "Monster", "Curse", "Item", etc.
     int value;        // Combat strength, treasure value, etc.
 
     Card(std::string n, std::string t, int v) : name(n), type(t), value(v) {}
+
+    
+    // Equality operator
+    bool operator==(const Card& other) const {
+        return name == other.name && type == other.type && value == other.value;
+    }
 };
 
 #endif
@@ -23,7 +31,6 @@ struct Card {
 // // Discard piles for reshuffling later
 // std::vector<Card> doorDiscardPile;
 // std::vector<Card> treasureDiscardPile;
-
 
 // Card drawDoorCard() {
 //     return drawCard(doorDeck, doorDiscardPile);

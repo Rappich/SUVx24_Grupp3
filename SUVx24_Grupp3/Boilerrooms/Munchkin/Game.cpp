@@ -18,9 +18,10 @@ void Game::run() // our custom main
     startGame();
     for (Player player : GetPlayerList())
     {
+        playerTurn(player);
         if (!doorDeck.cards.empty())
         {
-            player.addItemToInventory(doorDeck.drawCard());
+           // player.addItemToInventory(doorDeck.drawCard());
         }
         else
         {
@@ -32,6 +33,11 @@ void Game::run() // our custom main
 void Game::playerTurn(Player &player)
 {
     std::cout << "It's " << player.getName() << "'s turn!" << std::endl;
+    std::cout << "Player recieves 3 levels!" << std::endl;
+    player.levelUp();
+    player.levelUp();
+    player.levelUp();
+
 
     // Step 1: Action Phase - Ask if the player wants to do something with their hand (equip item, use potion, etc.)
     bool actionTaken = false;
@@ -192,6 +198,7 @@ void Game::startGame()
         {
             // implement logic to draw from discard pile after shuffling
         }
+        player.displayStatus();
     }
 }
 

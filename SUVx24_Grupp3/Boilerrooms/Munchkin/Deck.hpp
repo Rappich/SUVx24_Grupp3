@@ -19,7 +19,7 @@ private:
     DeckType deckType;
 
 public:
-    Deck();
+    Deck(){};
     Deck(DeckType deckType);
     void PopulateDeck(DeckType deckType);
     void shuffleDeck();
