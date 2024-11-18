@@ -1,7 +1,0 @@
-
-class DoorDeck
-{
-private: 
-
-public: 
-};

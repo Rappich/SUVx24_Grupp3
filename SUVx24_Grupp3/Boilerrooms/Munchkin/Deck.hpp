@@ -1,14 +1,34 @@
+#ifndef DECK_HPP
+#define DECK_HPP
 #include <vector>
 #include "Card.hpp"
+#include <algorithm> // for std::shuffle
+#include <random> 
+
+enum DeckType
+{
+    DoorDeck,
+    TreasureDeck,
+    DoorDiscardDeck,
+    TreasureDiscardDeck,
+};
 
 class Deck
 {
 private:
-    std::vector<Card> cards;
-
+    DeckType deckType;
 
 public:
-    void shuffle();
+    Deck();
+    Deck(DeckType deckType);
+    void PopulateDeck(DeckType deckType);
+    void shuffleDeck();
     Card drawCard();
+    void AddCard();
+    std::vector<Card> cards;
+
+    void SetdeckType(DeckType deckType);
     
 };
+
+#endif
