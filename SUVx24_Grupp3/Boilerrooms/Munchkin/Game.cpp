@@ -14,7 +14,12 @@ void Game::run() // our custom main
     std::string inputName;
     std::cin >> inputName;
     Player player1 = {inputName};
+    std::cout << "Enter player2's name: " << std::endl;
+    std::cin >> inputName;
+    Player player2 = inputName;
     AddPlayer(player1);
+    AddPlayer(player2);
+
     startGame();
     for (Player player : GetPlayerList())
     {
