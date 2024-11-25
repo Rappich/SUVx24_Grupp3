@@ -21,7 +21,7 @@ void Game::run() // our custom main
     AddPlayer(player2);
 
     startGame();
-    for (Player player : GetPlayerList())
+    for (Player& player : GetPlayerList())
     {
         playerTurn(player);
         if (!doorDeck.cards.empty())
@@ -179,7 +179,7 @@ void Game::playerTurn(Player &player)
 void Game::startGame()
 {
     // Game starts with player drawing 4 cards
-    for (Player player : GetPlayerList())
+    for (Player& player : GetPlayerList())
     {
         if (!doorDeck.cards.empty())
         {

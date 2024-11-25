@@ -28,7 +28,7 @@ public:
     Deck treasureDiscardDeck;
 
     //Getters
-    std::vector<Player> GetPlayerList() {return players;}
+    std::vector<Player>& GetPlayerList() {return players;}
 
     //Setters
     void AddPlayer(Player newPlayer);
