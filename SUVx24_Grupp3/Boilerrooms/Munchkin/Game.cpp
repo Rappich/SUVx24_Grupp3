@@ -8,33 +8,6 @@ Game::Game()
     treasureDeck.PopulateDeck(DeckType::TreasureDeck);
 }
 
-void Game::run() // our custom main
-{
-    std::cout << "Enter player name: " << std::endl;
-    std::string inputName;
-    std::cin >> inputName;
-    Player player1 = {inputName};
-    std::cout << "Enter player2's name: " << std::endl;
-    std::cin >> inputName;
-    Player player2 = inputName;
-    AddPlayer(player1);
-    AddPlayer(player2);
-
-    startGame();
-    for (Player& player : GetPlayerList())
-    {
-        playerTurn(player);
-        if (!doorDeck.cards.empty())
-        {
-           // player.addItemToInventory(doorDeck.drawCard());
-        }
-        else
-        {
-            // implement logic to draw from discard pile after shuffling
-        }
-    }
-}
-
 void Game::playerTurn(Player &player)
 {
     std::cout << "It's " << player.getName() << "'s turn!" << std::endl;
@@ -215,18 +188,4 @@ void Game::AddPlayer(Player newPlayer)
 {
     players.push_back(newPlayer);
 }
-int main()
-{
-    Game Munchkin;
-    Munchkin.run();
 
-    /*// Draw from Door Deck
-    Card doorCard = drawDoorCard();
-    std::cout << "You drew a Door card: " << doorCard.name << " (" << doorCard.type << ")\n";
-
-    // Draw from Treasure Deck
-    Card treasureCard = drawTreasureCard();
-    std::cout << "You drew a Treasure card: " << treasureCard.name << " (" << treasureCard.type << ")\n";*/
-
-    return 0;
-}

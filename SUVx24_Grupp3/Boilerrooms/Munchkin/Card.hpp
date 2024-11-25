@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm> // for std::shuffle
-#include <random>    // for random_device and mt19937
 #include <string>
 
 class Card
@@ -14,28 +12,11 @@ public:
     std::string type; // "Monster", "Curse", "Item", etc.
     int value;        // Combat strength, treasure value, etc.
 
+    //Add logic to handle unique Cardfunctionality eg. Bad stuff from monster
+
     Card(std::string n, std::string t, int v) : name(n), type(t), value(v) {}
 
-    
-    // Equality operator
-    bool operator==(const Card& other) const {
-        return name == other.name && type == other.type && value == other.value;
-    }
+     bool operator==(const Card& other);
 };
 
 #endif
-
-// Deck doorDeck;
-// std::vector<Card> treasureDeck;
-
-// // Discard piles for reshuffling later
-// std::vector<Card> doorDiscardPile;
-// std::vector<Card> treasureDiscardPile;
-
-// Card drawDoorCard() {
-//     return drawCard(doorDeck, doorDiscardPile);
-// }
-
-// Card drawTreasureCard() {
-//     return drawCard(treasureDeck, treasureDiscardPile);
-// }

@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm> // for std::shuffle
+#include <random>    // for random_device and mt19937
 #include "Player.hpp"
 #include "Deck.hpp"
 
@@ -16,7 +18,6 @@ private:
     
 public:
     Game();
-    void run();
     void startGame();
     void playerTurn(Player& player);
     void endTurn();
