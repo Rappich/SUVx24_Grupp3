@@ -16,11 +16,11 @@ private:
     
 public:
     Game();
-    void run();
     void startGame();
     void playerTurn(Player& player);
     void endTurn();
-    bool checkVictory();
+    bool checkVictory(std::vector<Player>& players);
+    void combat(Player &player, Card &drawnDoorCard);
 
     Deck doorDeck;
     Deck treasureDeck;
