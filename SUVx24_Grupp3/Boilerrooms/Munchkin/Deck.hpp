@@ -4,6 +4,7 @@
 #include "Card.hpp"
 #include <algorithm> // for std::shuffle
 #include <random> 
+#include "MonsterCards.hpp"
 
 enum DeckType
 {

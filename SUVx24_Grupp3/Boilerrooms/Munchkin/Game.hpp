@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm> // for std::shuffle
-#include <random>    // for random_device and mt19937
 #include "Player.hpp"
 #include "Deck.hpp"
 
@@ -21,7 +19,8 @@ public:
     void startGame();
     void playerTurn(Player& player);
     void endTurn();
-    bool checkVictory();
+    bool checkVictory(std::vector<Player>& players);
+    void combat(Player &player, Card &drawnDoorCard);
 
     Deck doorDeck;
     Deck treasureDeck;

@@ -1,11 +1,20 @@
 #include "Card.hpp"
 #include <string>
-#include <algorithm> // for std::shuffle
-#include <random>    // for random_device and mt19937
 
-    
+Card::Card()
+{
+}
 
-    bool Card::operator==(const Card& other) 
+void Card::displayCardInfo()
+{
+    std::cout << "You drew a Monster Card!\n";
+    std::cout << "Name: " << name << "\n";
+    std::cout << "Type: " << type << "\n";
+    std::cout << "Level: " << value << "\n";
+    std::cout << "Bad Stuff: \n";
+     for (const auto &effect : badStuff)
     {
-        return name == other.name && type == other.type && value == other.value;
+        std::cout << "- " << effect.first << ": " << effect.second << "\n";
     }
+    std::cout << "\n";
+}

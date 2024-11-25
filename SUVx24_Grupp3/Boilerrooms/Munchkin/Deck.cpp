@@ -13,40 +13,45 @@ Deck::Deck(DeckType deckType)
 
 void Deck::PopulateDeck(DeckType deckType)
 {
-
+    std::vector<MonsterData> monsterData = getMonsterData();
     if (deckType == DeckType::DoorDeck)
     {
         // Populate Door Deck
-        cards.push_back(Card("Level 1 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key", "Item", 2));
-        cards.push_back(Card("Level 2 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 2", "Item", 2));
-        cards.push_back(Card("Level 3 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 3 ", "Item", 2));
-        cards.push_back(Card("Level 4 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 4", "Item", 2));
-        cards.push_back(Card("Level 5 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 5", "Item", 2));
-        cards.push_back(Card("Level 1 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key", "Item", 2));
-        cards.push_back(Card("Level 2 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 2", "Item", 2));
-        cards.push_back(Card("Level 3 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 3 ", "Item", 2));
-        cards.push_back(Card("Level 4 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 4", "Item", 2));
-        cards.push_back(Card("Level 5 Skeleton", "Monster", 1));
-        cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
-        cards.push_back(Card("Magic Key 5", "Item", 2));
+        for(MonsterData data : monsterData)
+        {
+            cards.push_back(Card(data.name,data.type,data.level,data.badStuff));
+        }
+
+        // cards.push_back(Card("Level 1 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key", "Item", 2));
+        // cards.push_back(Card("Level 2 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 2", "Item", 2));
+        // cards.push_back(Card("Level 3 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 3 ", "Item", 2));
+        // cards.push_back(Card("Level 4 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 4", "Item", 2));
+        // cards.push_back(Card("Level 5 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 5", "Item", 2));
+        // cards.push_back(Card("Level 1 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key", "Item", 2));
+        // cards.push_back(Card("Level 2 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 2", "Item", 2));
+        // cards.push_back(Card("Level 3 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 3 ", "Item", 2));
+        // cards.push_back(Card("Level 4 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 4", "Item", 2));
+        // cards.push_back(Card("Level 5 Skeleton", "Monster", 1));
+        // cards.push_back(Card("Curse! Lose 1 Level", "Curse", 0));
+        // cards.push_back(Card("Magic Key 5", "Item", 2));
         shuffleDeck();
     }
     else
