@@ -6,6 +6,7 @@
 int main()
 {
     Game Munchkin;
+    Game M2;
 
     std::cout << "Enter player name: " << std::endl;
     std::string inputName;
@@ -17,18 +18,18 @@ int main()
     Munchkin.AddPlayer(player1);
     //Munchkin.AddPlayer(player2);
 
-     Munchkin.startGame();
+    Munchkin.startGame();
      bool playerWin = false;
      do
      {
          for (Player &player : Munchkin.GetPlayerList())
          {
-             Munchkin.playerTurn(player);
-             playerWin = Munchkin.checkVictory(Munchkin.GetPlayerList());
-             if(playerWin)
-             {
-                 break;
-             }
+            Munchkin.playerTurn(player);
+            playerWin = Munchkin.checkVictory(Munchkin.GetPlayerList());
+            if(playerWin)
+            {
+                break;
+            }
          }
      } while (!playerWin);
 

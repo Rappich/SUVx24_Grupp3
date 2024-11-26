@@ -10,6 +10,8 @@
                 "${file}",
                 "Deck.cpp",   // Add other necessary .cpp files here
                 "Player.cpp",
+                "Game.cpp",
+                "MonsterCards.cpp",
                 "Card.cpp", // Add Player.cpp or any other source file
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"

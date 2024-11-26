@@ -25,7 +25,7 @@ void Game::playerTurn(Player &player)
             // Display player's cards in hand and prompt for action
             std::cout << "\nYour current hand: " << std::endl;
             std::vector<Card> hand = player.getInventory();
-            for (size_t i = 0; i < hand.size(); ++i)
+            for (int i = 0; i < hand.size(); ++i)
             {
                 std::cout << i + 1 << ". " << hand[i].name << " (" << hand[i].type << ")" << std::endl;
             }
@@ -94,7 +94,7 @@ void Game::playerTurn(Player &player)
     Card drawnDoorCard;
     if (!doorDeck.cards.empty())
     {
-         drawnDoorCard = doorDeck.drawCard(); // Assume drawDoorCard is defined elsewhere
+        drawnDoorCard = doorDeck.drawCard(); // Assume drawDoorCard is defined elsewhere
         std::cout << "You drew a door card: " << drawnDoorCard.name << std::endl;
 
         // Step 3: Handle the drawn Door card (Monster, Curse, Class/Race, or other)
@@ -137,8 +137,9 @@ void Game::playerTurn(Player &player)
 
 void Game::startGame()
 {
+
     // Game starts with player drawing 4 cards
-    for (Player &player : GetPlayerList())
+    for (Player& player : GetPlayerList())
     {
         if (!doorDeck.cards.empty())
         {
